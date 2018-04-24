@@ -21,7 +21,7 @@ var organize = function(message)
   {
     if (i % 5 === 0 && i > 0)
     {
-      // expect.push("\n") // FOR DISPLAYING TH RECTANLGE
+      expect.push("\n")
       expect.push(message[i])
     }
     else
@@ -29,32 +29,9 @@ var organize = function(message)
       expect.push(message[i])
     }
   }
-var rez = expect
-//******************************** MAKING SUB ARRAYS ****************************************
-
-  var cubes = []
-  var size = 5
-
-  while (rez.length > 0)
-  {
-    cubes.push(rez.splice(0, size)) // THIS WILL MAKE SUB-ARRAYS
-  }
-
-var rectangle = cubes
-console.log("The rectangular display is as follows: \n")
-  for (var i = 0; i < rectangle.length; i ++)
-  {
-    console.log(rectangle[i])
-  }
-
+var x = expect
 //******************************** ENCRYPTING THE MESSAGE ****************************************
-
-   var rectangle = cubes[0].reduce((a, c, i1) => a.concat(cubes.map((s, i2) => s[i1])), []).join("");
-
-
-    var encryption = rectangle.match(/.{1,5}/g);
-
-    console.log("Your encryption is as follows: \n" + encryption.join(' '));
+console.log(x.join(''))
 
 }
 //******************************** PRINT RESULT AND THROW OUT GARBAGE ****************************************
@@ -62,6 +39,7 @@ console.log("The rectangular display is as follows: \n")
 if (message.length <= 81)
 {
    organize(message)
+   console.log(message.length)
 }
 else
 {
